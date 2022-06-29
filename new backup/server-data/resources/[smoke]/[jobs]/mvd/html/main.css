@@ -1,0 +1,353 @@
+/*-------------------------------------------------------------------------
+
+    Wraith Radar System - v1.01
+    Created by WolfKnight
+
+    Just a word of warning, I'm not the best at CSS structure, so this 
+	could probably be 10x better, but fuck it. 
+	
+
+	Plate Reader added by Ascaped (Uses css grids instead)
+    
+-------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "Digital-7";
+    src: url("digital-7.regular.ttf");
+}
+
+.databank-container {
+    display: none!important;
+    user-select: none;
+}
+
+
+/* mvd Radar */
+
+#mvdradar {
+    width: 495px;
+    height: 202px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: auto;
+    color: white;
+    background: rgba(20, 20, 20, 0.97);
+    background: linear-gradient(to bottom, rgb(50, 50, 50), rgb(25, 25, 25));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#mvdradar .antennalabel {
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+#mvdradar .antennalabeltop {
+    top: 0;
+    left: 0;
+    padding-top: 5px;
+}
+
+#mvdradar .antennalabelbottom {
+    bottom: 0;
+    left: 0;
+    padding-bottom: 5px;
+}
+
+#mvdradar .logo {
+    font-family: Verdana;
+    font-size: 17px;
+    font-weight: bold;
+    bottom: 15px;
+    right: 20px;
+    position: absolute;
+}
+
+#mvdradar .main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+#mvdradar .patrolcontainer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#mvdradar .typecontainer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 0;
+}
+
+#mvdradar .typecontainer .text {
+    font-family: Verdana;
+    font-size: 10px;
+    line-height: 27px;
+    margin-left: 13px;
+    color: black;
+}
+
+#mvdradar .typecontainer .active {
+    color: white;
+}
+
+#mvdradar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+}
+
+#mvdradar .arrowbox {
+    justify-content: center;
+    align-items: center;
+}
+
+#mvdradar .arrowbox i {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+}
+
+#mvdradar .arrowbox .active {
+    color: white;
+}
+
+#mvdradar .arrowbox .inactive {
+    color: black;
+}
+
+#mvdradar .container .label {
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+}
+
+#mvdradar .container .speedsourcecontainer {
+    width: 135px;
+    height: 58px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#mvdradar .container .speedsourcecontainer .speednumber {
+    width: 100%;
+}
+
+#mvdradar .container .speedsourcecontainer .text {
+    font-family: "Digital-7";
+    font-size: 58px;
+    line-height: 58px;
+    width: 100%;
+    text-align: center;
+}
+
+#mvdradar .container .target {
+    background: rgb(200, 0, 0);
+    background: linear-gradient(to bottom, rgb(220, 0, 40), rgb(90, 0, 0));
+}
+
+#mvdradar .container .patrol {
+    background: rgb(0, 125, 0);
+    background: linear-gradient(to bottom, rgb(0, 150, 0), rgb(0, 75, 0));
+}
+
+#mvdradar .container .locked {
+    color: rgb(50, 0, 0);
+}
+
+#mvdradar .container .speedfastcontainer {
+    width: 99px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#mvdradar .container .speedfastcontainer .speednumber {
+    width: 100%;
+}
+
+#mvdradar .container .speedfastcontainer .text {
+    font-family: "Digital-7";
+    font-size: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* mvd Radar - Remote Control */
+
+#mvdradarrc {
+    width: 290px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 5px;
+    color: white;
+    background-color: rgba(20, 20, 20, 0.95);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#mvdradarrc .breakline {
+    width: 230px;
+    height: 10px;
+    background-color: white;
+}
+
+#mvdradarrc .label {
+    font-family: Verdana;
+}
+
+#mvdradarrc .container {
+    font-family: Verdana;
+    align-items: center;
+}
+
+#mvdradarrc .container button {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+#mvdradarrc .container button:hover {
+    background-color: #6cd3f9;
+}
+
+#mvdradarrc .container button:active {
+    background-color: #56a8c7;
+}
+
+#mvdradarrc .container .toggle {
+    padding: 5px 15px;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+#mvdradarrc .container .limit {
+    padding: 5px 15px;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+#mvdradarrc .container .close {
+    padding: 3px 7px;
+    font-size: 12px;
+}
+
+#mvdradarrc .container .rowbutton {
+    width: 60px;
+    height: 60px;
+}
+
+#mvdradarrc .container .frontopp {
+    border-top-left-radius: 50%;
+}
+
+#mvdradarrc .container .frontsame {
+    border-top-right-radius: 50%;
+}
+
+#mvdradarrc .container .rearopp {
+    border-bottom-left-radius: 50%;
+}
+
+#mvdradarrc .container .rearsame {
+    border-bottom-right-radius: 50%;
+}
+
+
+/* Plate Reader */
+
+#platereader {
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    bottom: 105%;
+    margin: auto;
+    color: white;
+    background: rgba(20, 20, 20, 0.97);
+    background: linear-gradient(to bottom, rgb(50, 50, 50), rgb(25, 25, 25));
+    border-radius: 10px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(2, 2fr);
+    background-color: #2196f3;
+    padding: 2%;
+}
+
+#platereader .label {
+    display: grid;
+    grid-area: label;
+}
+
+#platereader .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 25%;
+    grid-template-areas: "pReader" "label";
+    background-color: #2196f3;
+    background: linear-gradient(to bottom, rgb(220, 0, 40), rgb(90, 0, 0));
+}
+
+#platereader .pReader {
+    display: grid;
+    grid-area: pReader;
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+#platereader .label {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+}
