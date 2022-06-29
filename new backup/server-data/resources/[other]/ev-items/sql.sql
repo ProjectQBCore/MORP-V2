@@ -1,0 +1,16 @@
+INSERT INTO `items` (`name`, `label`, `limit`) VALUES
+	('ammo_pistol', 'Pistol Ammo', -1),
+	('ammo_rifle', 'Rifle Ammo', -1),
+	('ammo_shotgun', 'Shotgun Shells', -1),
+	('ammo_smg', 'SMG Ammo', -1),
+	('ammo_snp', 'Sniper Ammo', -1),
+	('taco', 'Taco', -1),
+	('chocolate', 'Chocolate', -1),
+	('burger', 'Burger', -1),
+	('orange', 'Orange Juice', -1),
+	('cupcake', 'Cup Cake', -1),
+	('icetea', 'Ice Tea', -1),
+	('cola', 'Coca Cola', -1),
+	('vest', 'PD Hevy Vest', -1),
+	('policevest', 'Hevy Vest', -1),
+	('chips', 'Chips', -1);
