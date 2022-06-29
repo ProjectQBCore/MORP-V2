@@ -1,0 +1,56 @@
+*{color: white;font-family: 'Lato', monospace;}
+
+.container-main{
+    display: none;
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translate(-5%,-50%);
+    width: fit-content;
+    height: auto;
+    background-color: rgba(26, 26, 26, 0.7);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 5px solid #b12424;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.vehicle {
+    display: block;
+    margin-bottom:10px ;
+    margin-top:10px;
+}
+
+.name{
+    font-size: 2.1vh;
+    padding-right: 200px;
+}
+
+.title{
+    text-align: center;
+    font-size: 2.6vh;
+    font-weight: bold;
+}
+
+.select-btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+    background-color: #ca382c;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.342);
+    transition: 0.2s;
+    overflow: visible !important;
+    font-size: 20px;
+    transform: scale(1);
+    right: 2%;
+}
+
+.select-btn:hover {
+    background-color: #aa3126;
+    cursor: pointer;
+    transform: scale(1.1);
+}
