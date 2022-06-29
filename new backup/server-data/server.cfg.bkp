@@ -1,0 +1,469 @@
+# Steam Web API.  Visit https://steamcommunity.com/dev/apikey to generate your own.
+set steam_webApiKey "38435410B4F548D49AFA87935514D29D"
+
+# DB connection string
+set mysql_connection_string "server=127.0.0.1;uid=root;password=;database=bb"
+set es_enableCustomData 1
+set queue 0
+sets locale "en_IN"
+
+# You probably don't want to change these!
+# Only change them if you're using a server with multiple network interfaces.
+endpoint_add_tcp "51.79.169.23:30120"
+endpoint_add_udp "51.79.169.23:30120"
+
+#txadmin
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+
+# Server player slot limit
+set onesync_enableInfinity 1
+sv_maxclients 128
+onesync_distanceCullVehicles true
+onesync_forceMigration true
+
+# Ace!
+add_ace resource.essentialmode command.sets allow
+add_ace resource.essentialmode command.add_principal allow
+add_ace resource.essentialmode command.add_ace allow
+add_ace group.admin command allow
+add_ace group.admin command.quit deny
+add_principal identifier.steam:110000134976b2b group.admin
+add_principal identifier.steam:11000013eb5dd02 group.admin
+add_principal identifier.steam:110000131e1dcdb group.admin # Add your admin's SteamID here.  This line can be duplicated for additional admins.
+
+################# DEV TOOLS PERMISSION ###########
+add_ace group.admin command.profiler allow
+add_ace group.admin command.resmon allow
+add_ace group.admin command.nui_devtools allow
+###################################################
+
+################# EASYADMIN #######################
+
+ensure EasyAdmin
+
+setr ea_LanguageName "en"                # set our language to english
+setr ea_MenuButton "244"		 # set our menu button to M     F2 289
+
+add_ace group.admin easyadmin allow
+
+###################################################
+
+
+# These resources will start by default.
+start bob74_ipl
+start iplLoader
+start fivem-ipl
+
+start mapmanager
+start chat
+start spawnmanager
+start sessionmanager
+start fivem
+start hardcap
+start rconlog
+
+#tokovoip
+start ws_server
+start tokovoip_script
+
+#queue
+start connectqueue
+
+## essential
+start mysql-async
+start async
+start fxmigrant
+start essentialmode
+start esplugin_mysql
+start es_extended
+start MedSystem
+start esx_menu_dialog
+start esx_menu_default
+start esx_menu_list
+start esx_addonaccount
+start esx_addoninventory
+start esx_billing
+start esx_license
+start esx_society
+start esx_datastore
+start esx_identity
+start esx_service
+start esx_kashacters
+start spawnselector
+start es_admin2
+start showid
+start adminjail
+start jail
+start vineyards
+start ron-repair
+start discordPresence
+
+
+#DEV
+#start errorlog
+#start getcoords
+#start idgun
+#start ObjectNameFromHash
+
+#logs
+start JD_logs
+
+# Clothing
+start qb-clothing
+
+# Robbs
+start MORP_storer
+start MF_LockPicking
+start MORP_houseRobbery
+start ev-robberyMap
+start threatbar
+start lockpicking
+start ev-lockpick
+start mhacking
+
+#UTK
+start utk_ornateprops
+start utk_hackdependency
+start utk_fingerprint
+start utk_drilling
+start MORP_bankrobbery
+
+#system
+start MORP_loading
+start esx_scoreboard
+
+# drugs
+start t1ger_drugs
+
+#logs
+start RElex_logs
+start SHlogs
+
+
+# Other
+start InteractSound
+start banking
+#-start savta
+start cron
+start MORP_firework
+start pchat
+start esx_joblisting
+start ron-spawner
+start motels
+start 3dme
+#start LegacyFuel
+#start ev-hud
+start dpemotes
+start ev-items
+start ev-stuff
+start ev-sushiruns
+start raid_carmenu
+start mythic_ping
+start BanSql
+start MORP_weaponskn
+start Notification
+start dpclothing
+start taskbar
+start progressbar
+start skillbar
+start MORP_idcard
+start menu
+start progressBars
+start mythic_notify
+start mythic_hospital
+start lux_vehcontrol
+start xsound
+start esx_mechanicjob
+start MORP_blip
+start Morp_doctor
+
+# Inventory
+start disc-base 
+start ev-weapons
+start inventory
+
+start ghmattimysql
+
+# ESX
+start esx_status
+start esx_skin
+start skinchanger
+start esx_doorlock
+start esx-garage
+start esx_spectate
+start esx_basicneeds
+start esx_gps
+start esx_ambulancejob
+start esx_outlawalert
+
+#Housing
+start qb-apartments
+start qb-houses
+start qb-interior
+start qb-weed
+
+# Whitelist
+start MORP_whitelist
+
+# ESX Jobs
+start esx_garbagejob
+start esx_lscustom
+start esx_vehicleshop
+start esx_taxijob
+start ev-tacostand
+start pchat
+#start MORP_lawyerjob
+#start em_unicornjob
+
+#MORP
+start MORP_hud
+start veh_hud
+#start morp_logo
+
+# Maps 
+start MORP_court
+start BlipsBuilder
+start PoliceD
+start police
+#start morp_trees
+#start MORP_pillbox
+start motel
+start MORP_prison
+start MORP_lgs
+start MORP_autoschool
+start MORP_boxing
+start morp_garageprop
+start playboy
+start MORP_pillboxv2
+start MORP_hospital
+
+#cars
+start MORPAcura
+start MORPApollo
+start MORPEleanor
+start MORPSC18
+start MORPbmwgs3
+start MORPpista
+start MORPM4
+start MORPrmodi8
+start MORPMustang
+start MORPrmodjeep
+start MORPporshen
+start MORPninja
+start MORPkawasakih2
+start MORPsupra
+start MORPlegender
+start MORPingamecars
+start MORPm5
+start MORPgwagon
+start MORPevofq
+start MORPamggt63
+start audilm
+start gtr
+start MORPpole
+start urus
+
+#Police Cars and ems
+start ambulance2
+start madabike
+start pdcars
+start policemclaren
+start policeheli
+start policecenti
+start emsgt
+start policex6
+start policedodge
+start rmod69police
+start MORP_jeep
+
+#MADA
+start madabike
+start MDA_heli
+
+#DAVID-CUSTOM
+start bentley
+start fxxk
+start nissantitan17
+start truck
+
+#Smoke
+#GGWP
+start MORP_clip
+start MORP_vehicleshop
+start MORP_vehweapon
+start MORP_taser
+start MORP_plate
+#start MORP_train
+start MORP_announce
+start MORP_dog
+start MORP_sheriff
+start MORP_sheriff_script
+start MORP_flag
+start MORP_banner
+start MORP_atm
+start MORP_gokarting
+start MORP_gold
+start meta_libs
+start MORP_givevehicle
+start MORP_mining
+start MORP_truckrobbery
+start MORP_recoil
+start MORP_dyno
+start MORP_tdm
+start MORP_tdm_map
+start MORP_gun
+start MORP_trucker
+start MORP_clamp
+start MORP_policerader
+start MORP_fplate
+start MORP_marker
+start MORP_safe
+start MORP_Robbery_Uniform
+start MORP_shift
+start MORP_water
+start MORP_flatbed
+start MORP_carthief
+start MORP_streetfight
+start MORP_tackle
+start MORP_weaponshop
+start MORP_map
+start MORP_drift
+start MORP_technician
+start MORP_carlock
+start MORP_dirty
+start MORP_model
+start realisticvehicle
+start ls-radio
+start esx_policemdt
+
+#customs
+#start MORP_customs
+#start MORP_carsounds
+
+start mvd
+
+#arcade
+#start MenuAPI
+#start rcore_arcade
+start MORP_slot
+
+#gastation
+start esx_fuel
+start esx_gasstation
+
+#casino and cayo pari
+#start DLCiplLoader
+#start patoche_bridge
+start uj_casino
+
+#union
+start PolyZone
+start bt-target
+start bt-polyzone
+start MORP_union
+
+#phone
+start screenshot-basic
+start qb-phone_deluxe
+
+#WIP
+start esx_policemdt
+#start MORP_casino
+
+#gangs
+start MORP_vagos #map
+start MORP_territories
+#start MORP_ballasjob
+start MORP_kingpins
+start MORP_arakkal
+#start MORP_vagosjob
+start MORP_mafia
+
+#tattoo
+start new_overlays
+#start esx_tattooshop
+
+#kart
+start gokartmap
+start gokart1
+
+#Smoke END
+
+#bitter
+
+start Suku_Nitro
+start MORP_dmvschool
+start MORP_airlines
+start MORP_hunt
+start morp_barrier
+
+#bitter/eup
+
+start police_eup
+start policemale
+start EUP
+start MORP_EUP2
+start eup-stream
+start eup-stream2
+start hairandbeards
+
+#start jk_jobs
+
+
+#bitter/map
+start morp_maps
+
+#bitter end 
+# Bot
+# start ev-bot
+
+
+# Set this to 0 to disallow scripthook. Set it to 1 to make it easier to hack your server.
+sv_scriptHookAllowed 0
+
+# Uncomment this to enable RCON. Make sure to change the password.  You likely don't need this.
+#rcon_password changeme
+
+# A comma-separated list of tags for your server.
+# For example:
+# - sets tags "drifting, cars, racing"
+# Or:
+# - sets tags "roleplay, military, tanks"
+sets tags "Malayalam,Roleplay,MORP,Mallu Roleplay,Mallu"
+
+# Set an optional server info and connecting banner image url.
+# Size doesn't matter, any banner sized image will be fine.
+sets banner_detail "https://imgur.com/2UiqapR.png"
+sets banner_connecting "https://imgur.com/CgvW6LA.png"
+
+# Set your server's hostname
+sv_hostname "^6[MALLU] ^8MORP V2^0 | ^4MALLU OFFICIAL ROLEPLAY^0 | ^4INDIA^0"
+
+# Load a server icon (96x96 PNG file)
+load_server_icon MORPLOGO.png
+
+# Uncomment this line if you do not want your server to be listed in the server browser.
+#sv_master1 ""
+
+# Want to only allow players authenticated with a third-party provider like Steam?
+# Don't forget Social Club is a third party provider too!
+#sv_authMaxVariance 1
+#sv_authMinTrust 5
+
+#tebex
+sv_tebexSecret 35249dee2a975664fbf3c3890af6fabcd58eb1d4
+
+sets sv_projectName "^8MORP V2^0 | ^4MALLU OFFICIAL ROLEPLAY^0 | ^4INDIA^0"
+#sets sv_projectName "MORP - MALLU OFFICIAL ROLEPLAY"
+
+# Hide player endpoints in external log output.
+sv_endpointprivacy true
+
+
+# License key for your server (https://keymaster.fivem.net)
+sv_licenseKey "6uoevl9ipa49nzhubs0hkrckaje5u15i"
+
+restart sessionmanager
+
+print "========== MORP =========="
